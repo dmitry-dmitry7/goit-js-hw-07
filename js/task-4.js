@@ -1,4 +1,4 @@
-const  form = document.querySelector("form");
+const  form = document.querySelector(".login-form");
 form.addEventListener("submit", handleSubmit);
 	
 function handleSubmit(event) {
@@ -8,7 +8,7 @@ function handleSubmit(event) {
   const email = regForm.elements.email.value;
   const password = regForm.elements.password.value;
 
-  if (email === "" || password === "") {
+  if (email.trim() === "" || password.trim() === "") {
     return window.alert("All form fields must be filled in");
   }
 
